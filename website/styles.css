@@ -1,0 +1,194 @@
+:root {
+  --brand-yellow: #f8e182;
+  --text-blue: #1c365d;
+  --text-light: #e0e8f5;
+  --nav-text: #ffffff;
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100vh;
+  font-family: 'Inter', sans-serif;
+  overflow: hidden;
+  /* Use the background image */
+  background: url('assets/bg.png') no-repeat center center;
+  background-size: cover;
+}
+
+/* Navigation */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px 64px;
+  position: relative;
+  z-index: 10;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo {
+  height: 40px;
+  width: auto;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 32px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--nav-text);
+  font-weight: 400;
+  font-size: 1rem;
+  transition: opacity 0.2s;
+}
+
+.nav-links a:hover {
+  opacity: 0.8;
+}
+
+/* Call to Action Buttons */
+.cta-button {
+  background-color: #fde485;
+  color: #0f172a;
+  border: none;
+  border-radius: 50px;
+  padding: 12px 24px;
+  font-size: 1.05rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  cursor: pointer;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s, box-shadow 0.2s, background-color 0.2s;
+}
+
+.cta-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  background-color: #fce068;
+}
+
+.chrome-icon {
+  width: 24px;
+  height: 24px;
+}
+
+.hero-cta {
+  padding: 16px 36px;
+  font-size: 1.2rem;
+  margin-top: 24px;
+  margin-bottom: 24px;
+}
+
+.arrow {
+  margin-left: 4px;
+  display: flex;
+  align-items: center;
+}
+
+/* Hero Section */
+.hero {
+  position: relative;
+  width: 100%;
+  height: calc(100vh - 100px);
+  display: flex;
+  align-items: center;
+  padding: 0 64px;
+}
+
+.hero-content {
+  max-width: 650px;
+  z-index: 10;
+  margin-top: -100px;
+}
+
+.headline {
+  font-family: 'Fraunces', serif;
+  font-weight: 900;
+  font-size: 4rem;
+  line-height: 1.1;
+  color: var(--brand-yellow);
+  margin: 0 0 20px 0;
+  letter-spacing: -1.5px;
+  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.subheadline {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: var(--text-light);
+  margin: 0 0 32px 0;
+  font-weight: 400;
+}
+
+.features-list {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--brand-yellow);
+  font-size: 1rem;
+  font-weight: 400;
+  opacity: 0.9;
+}
+
+.dot {
+  font-size: 0.8rem;
+}
+
+/* Recreated Sticky Note */
+.sticky-note {
+  position: absolute;
+  bottom: 120px;
+  right: 480px; /* Adjust based on the 3D illustration */
+  background-color: #fce28b;
+  width: 160px;
+  padding: 16px 20px;
+  box-shadow: 2px 8px 24px rgba(0,0,0,0.25);
+  transform: rotate(-4deg);
+  font-family: 'Nanum Pen Script', cursive;
+  font-size: 1.6rem;
+  color: #3b3b3b;
+  z-index: 5;
+}
+
+.task {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+  line-height: 1.2;
+}
+
+.task:last-child {
+  margin-bottom: 0;
+}
+
+.check-box {
+  font-size: 1.4rem;
+  color: #444;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+  .sticky-note {
+    right: 350px;
+  }
+}
+@media (max-width: 900px) {
+  .headline { font-size: 4rem; }
+  .sticky-note { display: none; }
+}
