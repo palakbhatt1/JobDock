@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 60" width="200" height="60">
+  <defs>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="2" stdDeviation="2" flood-opacity="0.15" />
+    </filter>
+  </defs>
+
+  <!-- Folder Icon -->
+  <g transform="translate(0, 5)">
+    <!-- Paper sticking out -->
+    <path d="M 20 10 L 45 10 C 47 10, 50 12, 50 15 L 50 35 L 15 35 L 15 15 C 15 12, 17 10, 20 10 Z" fill="#dbe3f0" />
+    
+    <!-- Folder Body -->
+    <path d="M 10 20 L 30 20 L 36 26 L 60 26 C 64 26, 68 29, 68 33 L 68 47 C 68 51, 64 54, 60 54 L 10 54 C 6 54, 2 51, 2 47 L 2 28 C 2 24, 6 20, 10 20 Z" fill="#eab345" filter="url(#shadow)" />
+  </g>
+
+  <!-- Text -->
+  <!-- I made the text white so it doesn't vanish into your blue background! -->
+  <text x="80" y="44" font-family="'Inter', -apple-system, sans-serif" font-weight="700" font-size="28" letter-spacing="-0.5">
+    <tspan fill="#ffffff">JobDock</tspan>
+  </text>
+</svg>

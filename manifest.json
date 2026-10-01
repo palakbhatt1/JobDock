@@ -1,0 +1,43 @@
+{
+  "manifest_version": 3,
+  "name": "JobDock",
+  "version": "0.1.0",
+  "description": "Proactive job search and cold outreach tracker.",
+  "permissions": [
+    "storage",
+    "alarms",
+    "sidePanel"
+  ],
+  "host_permissions": [
+    "https://www.linkedin.com/*",
+    "https://mail.google.com/*"
+  ],
+  "background": {
+    "service_worker": "background/service-worker.js"
+  },
+  "action": {
+    "default_popup": "popup/popup.html",
+    "default_title": "Open JobDock"
+  },
+  "side_panel": {
+    "default_path": "sidepanel/index.html"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://www.linkedin.com/*"
+      ],
+      "js": [
+        "content-scripts/linkedin.js"
+      ]
+    },
+    {
+      "matches": [
+        "https://mail.google.com/*"
+      ],
+      "js": [
+        "content-scripts/gmail.js"
+      ]
+    }
+  ]
+}
